@@ -28,7 +28,8 @@ function Home(){
                 todos.map(todo => (
                     <div className='task'>
                         <div className='checkbox' onClick= {()=> handleEdit(todo._id)}>   
-                        {todo.task}
+                            {todo.done}
+                        <p className={todo.done ? "line_through" : ""}> {todo.task} </p>
                         </div>
                         </div>
                 ))
